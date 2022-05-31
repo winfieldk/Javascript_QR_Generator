@@ -10,9 +10,6 @@ btn.addEventListener("click", () => {
     const phone = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
     const email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-
-
-    //console.log(email);
     if (!qrValue) return;
     btn.innerText = "Generating QR Code...";
 
@@ -27,9 +24,6 @@ btn.addEventListener("click", () => {
 
     qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrValue}`;
 
-
-
-
     qrImg.addEventListener("load", () => {
         wrap.classList.add("show");
         btn.innerText = "Generate QR Code";
@@ -40,7 +34,7 @@ btn.addEventListener("click", () => {
 dwnBtn.addEventListener("click", () => {
     let qrValue = qrInput.value;
     qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${qrValue}&download=1`;
-    downloadURI(qrImg.src, 'QRCode.png');
+    downloadURI(qrImg.src, 'QRCode1.png');
 });
 
 function downloadURI(uri, name) {
@@ -60,7 +54,7 @@ function showButton(value) {
         </a>
     `;
     qrImg.insertAdjacentHTML("afterend", download);
-    //return download; 
+
 }
 
 qrInput.addEventListener("keyup", () => {
