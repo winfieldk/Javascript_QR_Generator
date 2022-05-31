@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>QR Generator </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>QR Code Generator</h1>
+            <p>Paste a url or enter text to create QR code.</p>
+        </header>
+        <div class="form">
+            <input type="text" spellcheck="false" placeholder="Enter text or URL " />
+            <button class="btn">Generate QR Code</button>
+        </div>
+        <div class="qr-code" id="qr-code">
+            <img src="" alt="qr-code" class="qr-img" />
+
+            <button class="download">Download QR Code</button>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script type="text/javascript" src="http://static.runoob.com/assets/qrcode/qrcode.min.js"></script>
+</body>
+
+</html>
